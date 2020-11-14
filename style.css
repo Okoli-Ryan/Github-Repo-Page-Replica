@@ -1,0 +1,413 @@
+* {
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+		'Helvetica Neue', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+body {
+	/* background-color: #d0d0d0; */
+	margin: 0;
+}
+
+.none{
+    display: none;
+}
+
+.header {
+	background-color: #24292e;
+	flex-direction: row;
+	padding: 0.8rem 2rem;
+	width: 100%;
+}
+
+
+.header-left, .header-right{
+    display: flex
+}
+
+div.header-top, div.header-bottom{
+    display: none;
+}
+
+.header > * {
+	margin: 0;
+}
+
+.flex {
+	display: flex;
+    margin: 0;
+}
+
+.align{
+    align-items: center;
+}
+/* 
+.header > * {
+	height: 100%;
+} */
+
+.header-left {
+	width: 75%;
+	align-items: center;
+}
+
+.header-left > * {
+	margin-right: 1rem;
+	max-height: 80%;
+}
+
+.header-left img {
+	height: 2rem;
+	width: 2rem;
+}
+
+.header-left input {
+	width: 17rem;
+	height: 2.4rem;
+	border: 1px solid rgb(122, 122, 122);
+	background: transparent;
+	border-radius: 5px;
+	padding: 0.2rem 1rem;
+	font-size: 0.9rem;
+	font-weight: 700;
+}
+
+.header-left input::placeholder {
+	color: rgb(180, 180, 180);
+}
+
+.header-right {
+	justify-content: flex-end;
+	width: 25%;
+	align-items: center;
+}
+
+.header-right > * {
+	margin-left: 1rem;
+}
+
+.header-right img {
+	height: 1rem;
+	width: 1rem;
+}
+
+.caret {
+	width: 0.5rem !important;
+	height: 0.5rem !important;
+	margin-left: 0.4rem;
+}
+
+.header-right span {
+	align-items: center;
+}
+
+.myImage {
+	height: 1.5rem !important;
+	width: 1.5rem !important;
+	border-radius: 50%;
+}
+
+.container {
+    margin-top: 2rem;
+    padding: 1rem;
+    flex-direction: row;
+}
+
+.container-left {
+	width: 25%;
+	flex-direction: column;
+	padding: 0 1rem;
+}
+
+.container-left > *{
+    margin-bottom: 1rem;
+}
+
+.profile-pic {
+	height: 20vw;
+	width: 20vw;
+	object-fit: fill;
+	border-radius: 50%;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0rem !important;
+}
+
+.login-name {
+    font-size: 1.15rem;
+    font-weight: 200;
+}
+
+.bio {
+	font-size: 1rem;
+}
+
+.container-right{
+    width: 75%;
+    padding-top: 3rem;
+    flex-direction: column;
+}
+
+.container-right > input{
+    border: 1px solid rgb(206, 206, 206);
+    width: 100%;    
+    height: 2.4rem;
+    border-radius: 5px;
+    margin-right: 1rem;
+    padding-left: 1rem;
+}
+
+.container-right > input::placeholder{
+    color: #24292e
+}
+
+.repo{
+    height: 7.5rem;
+    /* padding: 1rem 0; */
+    border-bottom: 1px solid rgb(172, 172, 172);
+}
+
+.repo-left{
+    width: 70%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.repo-left > *{
+    margin-bottom: .9rem;
+}
+
+.repo-name{
+    font-size: 20px;
+    font-weight: 600;
+    color: #0366d6;
+    margin-top: 1rem;
+    margin-bottom: .5rem !important;
+}
+
+.desc{
+    font-size: 14px;
+    line-height: 21px;
+    color: #586069;
+}
+
+.details{
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.details *{
+    color: #586069
+}
+
+.details > *{
+    margin-right: 1rem;
+}
+
+.primary-code{
+    flex-direction: row;
+}
+
+.primary-code-color{
+    width: .75rem;
+    height: .75rem;
+    /* padding: 100%; */
+    border-radius: 50%;
+    margin-right: .2rem;
+    background-color: yellowgreen;
+}
+
+.primary-code-name, .star-number, .fork-number{
+    font-size: 12px;
+}
+
+.star, .forks img{
+    height: .75rem;
+    width: .75rem;
+    margin-right: .2rem;
+
+}
+
+.updatedAt{
+    font-size: 12px;
+}
+
+.repo-right{
+    height: 100%;
+    width: 30%;
+    justify-content: flex-end;
+}
+
+.repo-right > *{
+    padding: 5px 12px;
+    /* height: 20px; */
+    width: 100%;
+    flex-direction: row;
+}
+
+#star-butt{
+    font-size: 14;
+    font-weight: 700;
+}
+
+.star-button{
+    border: 1px solid rgb(172, 172, 172);
+    outline: none;
+    border-radius: 5px;
+    width: 4rem;
+    background-color: #f3f4f6;
+    justify-content: center;
+}
+
+.star-button .star{
+    margin-right: .5rem;
+}
+
+.info{
+    flex-direction: column;
+}
+
+.mobile-container-left{
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 768px){
+
+    .header{
+        flex-direction: column;
+        /* padding: .5rem 2rem !important; */
+        padding: 0 !important;
+    }
+
+    .header div.header-bottom{
+        display: flex ;
+        flex-direction: column;
+    }
+
+    .header-bottom > input{
+        background: transparent;
+        border-radius: 5px;
+        outline: none;
+        padding: .3rem 1rem;
+        border: 1px solid rgb(172, 172, 172);
+        margin-bottom: 1rem;
+    }
+
+    .header-bottom > input::placeholder{
+        color: rgb(180, 180, 180);
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .header-bottom > a{
+        padding: .6rem 0;
+        font-size: 14px;
+        font-weight: 600;
+        border-top: 1px solid rgb(172, 172, 172);
+    }
+
+    .header-bottom img{
+        height: 1rem;
+        width: 1rem;
+        margin-right: 1rem;
+    }
+
+    .pic{
+        border-radius: 50%;
+    }
+
+    .a-menu{
+        flex-direction: row;
+    }
+
+    .header-top{
+        justify-content: space-between;
+        padding: 0.8rem 1rem;
+        display: flex !important;
+        width: 100%;
+        align-items: center;
+        /* height: 2.5rem; */
+    }
+
+
+    .header-top img, .header-bottom img{
+        display: block;
+        width: 1.3rem;
+        height: 1.3rem;
+        padding: 0;
+    }
+
+    /* .header > div{
+        display: none;
+    } */
+
+    .container{
+        flex-direction: column;
+    }
+
+    .container-left{
+        flex-direction: column;
+        padding: 0
+    }
+
+    .container-left, .container-right{
+        width: 100%;
+    }
+
+    .git-logo{
+        height: 2rem !important;
+        width: 2rem !important;
+    }
+
+    .mobile-container-left{
+        flex-direction: row;
+    }
+
+    .container-right{
+        padding-top: 1rem;
+    }
+
+    .info{
+        justify-content: center;
+        margin-left: 1.5rem;;
+    }
+
+    .name{
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    .login-name{
+        font-size: 20px;
+    }
+
+    .bio{
+        font-size: 16px;
+    }
+
+    .profile-pic{
+        height: 15vw;
+        width: 15vw;
+    }
+
+    .header-bottom{
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .header div.header-left, .header div.header-right{
+        display: none;
+    }
+
+}
