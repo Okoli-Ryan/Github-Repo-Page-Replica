@@ -81,5 +81,5 @@ xhttp.onreadystatechange = function () {
 
 };
 
-xhttp.open('GET', 'http://localhost:3000', true);
+xhttp.open('GET', 'http://localhost:4000', true);
 xhttp.send();
