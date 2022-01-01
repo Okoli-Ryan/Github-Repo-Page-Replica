@@ -10,7 +10,7 @@ const app = express();
 // })
 
 app.use(cors({origin: true}))
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const githubData = {
 	token: '2354b22e8d3ac594a00d639cc8f969faed601f63',
