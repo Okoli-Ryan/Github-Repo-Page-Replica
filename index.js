@@ -13,12 +13,12 @@ app.use(cors({origin: true}))
 const port = process.env.PORT || 4000;
 
 const githubData = {
-	token: '2354b22e8d3ac594a00d639cc8f969faed601f63',
-	username: 'Okoli-Ryan',
+  token: "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",
+  username: "Okoli-Ryan",
 };
 const body = {
-	query: `query {
-        user(login: "${githubData['username']}") {
+  query: `query {
+        user(login: "${githubData["username"]}") {
             name
             bio
             login
@@ -41,24 +41,23 @@ const body = {
 };
 
 const options = {
-	method: 'POST',
-	headers: {
-		'Content-Type': 'application/json',
-		Authorization: 'bearer ' + githubData.token,
-		// 'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-	},
-	body: JSON.stringify(body),
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: "bearer " + githubData.token,
+    // 'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+  },
+  body: JSON.stringify(body),
 };
 
 (async () => {
-    const a = await fetch(`https://api.github.com/graphql`, options);
-    const result = await a.json()
-    app.get('/', (req, res) => {
-        res.send(result.data.user)
-    })
-
-
-
-})()
+  const a = await fetch(`https://api.github.com/graphql`, options);
+  const result = await a.json();
+  console.log(result);
+  app.get("/", (req, res) => {
+    // res.send(result.data.user)
+    res.send("hi");
+  });
+})();
 
 app.listen(port, () => console.log("server running at " + port))
