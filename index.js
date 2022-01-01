@@ -1,6 +1,7 @@
 const fetch = require('node-fetch');
 const express = require('express');
 const cors = require('cors')
+require("dotenv").config();
 
 const app = express();
 // app.use(function (req, res, next) {
@@ -9,11 +10,11 @@ const app = express();
 //     next()
 // })
 
-app.use(cors({origin: true}))
+app.use(cors({ origin: true }));
 const port = process.env.PORT || 4000;
 
 const githubData = {
-  token: "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",
+  token: process.env.ACCESS_TOKEN,
   username: "Okoli-Ryan",
 };
 const body = {
@@ -55,8 +56,8 @@ const options = {
   const result = await a.json();
   console.log(result);
   app.get("/", (req, res) => {
-    // res.send(result.data.user)
-    res.send("hi");
+    res.send(result.data.user);
+    // res.send("hi");
   });
 })();
 
